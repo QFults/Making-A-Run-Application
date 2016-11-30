@@ -1,0 +1,54 @@
+﻿    @{
+        Layout = null;
+    }
+<div class="container">
+    <div class="row">
+        <h2>active trips.</h2>
+        <div class="col-md-10">
+            <div ng-repeat="item in data">
+                <div ng-show="item.isActive">
+                <div></div>
+                <span> Trip: {{item.Name}}</span>
+                <div></div>
+                <span> Time Ending: {{item.EndTime}}</span>
+                <div></div>
+                <span> Location: {{item.Location.Name}}</span>
+                <div></div>
+                <span> Number of Orders Placed: {{item.Orders_Count}}</span>
+                <div> </div>
+                <span> Created By: {{item.User_Username}}</span>
+                <br />
+                <span class="selectItem" ng-click="selectTrip(item)" > click to modify trip.</span>
+                <hr  />
+                </div>
+                </div>
+                <h1>Countdown Clock</h1>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days" ng-hide="true"></span>
+                        <div class="smalltext" ng-hide="true">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="smalltext">Minutes</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="smalltext">Seconds</div>
+                    </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+                <ui-view>
+                    <button class="btn btn-default orderbtn" ng-click="ViewTrip()" ng-disabled="isDisabled()">Details</button>
+                    <button class="btn btn-default orderbtn" ng-click="EditTrip()" ng-disabled="isDisabled()">Edit</button>
+                    <button class="btn btn-default orderbtn" ng-click="DeleteTrip()" ng-disabled="isDisabled()">Delete</button>
+                </ui-view>
+                    </div>
+            </div>
+        </div>
+    

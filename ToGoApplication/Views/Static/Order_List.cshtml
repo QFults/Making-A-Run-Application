@@ -1,0 +1,58 @@
+﻿    @{
+        Layout = null;
+    }
+    <h2>Order</h2>
+    <p>
+        <a href="#/Order/Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Food
+            </th>
+            <th>
+                Drink
+            </th>
+            <th>
+                PaymentMethod
+            </th>
+            <th>
+                User
+            </th>
+            <th>
+                Trip
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data">
+            <td>
+                {{ item.Food }}
+            </td>
+            <td>
+                {{ item.Drink }}
+            </td>
+            <td>
+                {{ item.PaymentMethod }}
+            </td>
+            <td>
+                    <a ng-href="#User/{{item.UserId }}" >
+                    {{item.User_Username}}
+                    </a>
+            </td>
+            <td>
+                    <a ng-href="#Trip/{{item.TripId }}" >
+                    {{item.Trip_Name}}
+                    </a>
+            </td>
+            <td>
+                <a ng-href="#/Order/Edit/{{item.Id}}">Edit</a> |
+                <a ng-href="#/Order/{{item.Id}}">Details</a> |
+                <a ng-href="#/Order/Delete/{{item.Id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    
+    </table>

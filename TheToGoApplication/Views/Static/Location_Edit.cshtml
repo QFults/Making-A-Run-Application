@@ -1,0 +1,34 @@
+﻿@*{
+    Layout = null;
+}
+    <h2>Location</h2>
+    <form name="theForm">
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Image" class = "control-label col-md-2"> Image </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Image" id="Image"  class="form-control"/>
+                    <div id="validation_for_Image"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2"> Name </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Name" id="Name"  class="form-control"/>
+                    <div id="validation_for_Name"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div>
+        <a href="#/Location">Back to List</a>
+    </div>*@

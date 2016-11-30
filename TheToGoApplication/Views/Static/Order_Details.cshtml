@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Order Details Test</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Food" class = "control-label col-md-2">
+                Food
+                </label>
+                <div class="col-md-10">
+                    {{data.Food}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Drink" class = "control-label col-md-2">
+                Drink
+                </label>
+                <div class="col-md-10">
+                    {{data.Drink}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="PaymentMethod" class = "control-label col-md-2">
+                PaymentMethod
+                </label>
+                <div class="col-md-10">
+                    {{data.PaymentMethod}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="User" class = "control-label col-md-2">
+                 User
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#User/{{User }}" >
+                    {{data.User_Username}}
+                    </a>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Trip" class = "control-label col-md-2">
+                 Trip
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#Trip/{{Trip }}" >
+                    {{data.Trip_Name}}
+                    </a>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+    <div>
+        <a ui-sref="Home.myOrders" class="loginLink">Back to List</a>
+    </div>

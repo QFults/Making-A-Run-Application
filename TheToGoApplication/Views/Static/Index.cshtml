@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/StyleSheets/LocationFileStyleSheet.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/StyleSheets/MainStyleSheet.css" rel="stylesheet" />
+    <title>My Angular.NET Application</title>
+    <!-- Angular 1.5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <!-- UI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div id="myNavbar" class="container">
+            <div class="navbar-header">
+                <a ui-sref="Home" id="pageNameLink" class="navbar-brand">making a run.</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <ui-view/>
+        <hr />
+    </div>
+
+    <!--
+        You must add the bundle for the angular by hand
+        Just paste:
+            bundles.Add(new ScriptBundle("~/bundles/angular-app").Include("~/Scripts/app/*.js"));
+        right into BundleConfig.cs
+    -->
+
+    <script src="~/Scripts/AppFolder/App.js"></script>
+    <script src="~/Scripts/app/Controllers.js"></script>
+</body>
+</html>

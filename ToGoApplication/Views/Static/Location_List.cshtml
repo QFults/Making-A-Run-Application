@@ -1,0 +1,41 @@
+﻿    @{
+        Layout = null;
+    }
+    <h2>Location</h2>
+    <p>
+        <a href="#/Location/Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Trip
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data">
+            <td>
+                {{ item.Image }}
+            </td>
+            <td>
+                {{ item.Name }}
+            </td>
+            <td>
+            </td>
+            <td>
+                <a ng-href="#/Location/Edit/{{item.Id}}">Edit</a> |
+                <a ng-href="#/Location/{{item.Id}}">Details</a> |
+                <a ng-href="#/Location/Delete/{{item.Id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    
+    </table>

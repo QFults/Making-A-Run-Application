@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+    <h2>User</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            Are you sure that you want to delete {{User}}?
+            <div class="form-group">
+                <label for="Username" class = "control-label col-md-2">
+                Username
+                </label>
+                <div class="col-md-10">
+                    {{data.Username}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Password" class = "control-label col-md-2">
+                Password
+                </label>
+                <div class="col-md-10">
+                    {{data.Password}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2">
+                Name
+                </label>
+                <div class="col-md-10">
+                    {{data.Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Company" class = "control-label col-md-2">
+                Company
+                </label>
+                <div class="col-md-10">
+                    {{data.Company}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Email" class = "control-label col-md-2">
+                Email
+                </label>
+                <div class="col-md-10">
+                    {{data.Email}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="PhoneNumber" class = "control-label col-md-2">
+                PhoneNumber
+                </label>
+                <div class="col-md-10">
+                    {{data.PhoneNumber}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Orders" class = "control-label col-md-2">
+                 Orders
+                </label>
+                <div class="col-md-10">
+                    {{data.Orders_Count}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Trips" class = "control-label col-md-2">
+                 Trips
+                </label>
+                <div class="col-md-10">
+                    {{data.Trips_Count}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    
+    <div>
+    </div>

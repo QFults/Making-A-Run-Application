@@ -1,0 +1,64 @@
+﻿    @{
+        Layout = null;
+    }
+    <h2>User</h2>
+    <p>
+        <a href="#/User/Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Username
+            </th>
+            <th>
+                Password
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Company
+            </th>
+            <th>
+                Orders
+            </th>
+            <th>
+                Trips
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data">
+            <td>
+                {{ item.Username }}
+            </td>
+            <td>
+                {{ item.Password }}
+            </td>
+            <td>
+                {{ item.Name }}
+            </td>
+            <td>
+                {{ item.Company }}
+            </td>
+            <td>
+                    <a ng-href="#Order?User={{item.Id }}" >
+                    {{item.Orders_Count}}
+                    </a>
+            </td>
+            <td>
+                    <a ng-href="#Trip?User={{item.Id }}" >
+                    {{item.Trips_Count}}
+                    </a>
+            </td>
+            <td>
+                <a ng-href="#/User/Edit/{{item.Id}}">Edit</a> |
+                <a ng-href="#/User/{{item.Id}}">Details</a> |
+                <a ng-href="#/User/Delete/{{item.Id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    
+    </table>

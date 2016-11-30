@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null;
+}
+    <h2>User</h2>
+    <form name="theForm">
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Username" class = "control-label col-md-2"> Username </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Username" id="Username"  class="form-control"/>
+                    <div id="validation_for_Username"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Password" class = "control-label col-md-2"> Password </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Password" id="Password"  class="form-control"/>
+                    <div id="validation_for_Password"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2"> Name </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Name" id="Name"  class="form-control"/>
+                    <div id="validation_for_Name"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Company" class = "control-label col-md-2"> Company </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Company" id="Company"  class="form-control"/>
+                    <div id="validation_for_Company"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div>
+        <a href="#/User">Back to List</a>
+    </div>

@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Order</h2>
+    <form name="theForm">
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Food" class = "control-label col-md-2"> Food </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Food" id="Food"  class="form-control"/>
+                    <div id="validation_for_Food"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Drink" class = "control-label col-md-2"> Drink </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Drink" id="Drink"  class="form-control"/>
+                    <div id="validation_for_Drink"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="PaymentMethod" class = "control-label col-md-2"> PaymentMethod </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.PaymentMethod" id="PaymentMethod"  class="form-control"/>
+                    <div id="validation_for_PaymentMethod"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="TripId" class = "control-label col-md-2"> Trip </label>
+                <div class="col-md-10">
+                    <select ng-model="data.TripId" id="TripId"  class="form-control"
+                            ng-options='option.Id as (option.Name + option.Id + ". Trip to " + option.Location.Name + " at " + option.Time) for option in TripId_options' ng-change="GoingOnATrip()">
+                        <option value="">-- choose Trip --</option>
+                    </select>
+                    <div id="validation_for_TripId"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div>
+        <a ui-sref="Home.myOrders" class="loginLink">Back to List</a>
+    </div>

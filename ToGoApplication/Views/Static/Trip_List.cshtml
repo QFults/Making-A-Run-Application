@@ -1,0 +1,63 @@
+﻿    @{
+        Layout = null;
+    }
+    <h2>Trip</h2>
+    <p>
+        <a href="#/Trip/Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Time
+            </th>
+            <th>
+                Location
+            </th>
+            <th>
+                User
+            </th>
+            <th>
+                Orders
+            </th>
+            <th>
+                Location1
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data">
+            <td>
+                {{ item.Name }}
+            </td>
+            <td>
+                {{ item.Time }}
+            </td>
+            <td>
+                {{ item.Location }}
+            </td>
+            <td>
+                    <a ng-href="#User/{{item.UserId }}" >
+                    {{item.User_Username}}
+                    </a>
+            </td>
+            <td>
+                    <a ng-href="#Order?Trip={{item.Id }}" >
+                    {{item.Orders_Count}}
+                    </a>
+            </td>
+            <td>
+            </td>
+            <td>
+                <a ng-href="#/Trip/Edit/{{item.Id}}">Edit</a> |
+                <a ng-href="#/Trip/{{item.Id}}">Details</a> |
+                <a ng-href="#/Trip/Delete/{{item.Id}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    
+    </table>

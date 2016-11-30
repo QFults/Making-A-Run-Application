@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Trip</h2>
+    <form name="theForm">
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2"> Name </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Name" id="Name"  class="form-control"/>
+                    <div id="validation_for_Name"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Time" class = "control-label col-md-2"> Time </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Time" id="Time"  class="form-control"/>
+                    <div id="validation_for_Time"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Location" class = "control-label col-md-2"> Location </label>
+                <div class="col-md-10">
+                    <input type="text" ng-model="data.Location" id="Location"  class="form-control"/>
+                    <div id="validation_for_Location"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="UserId" class = "control-label col-md-2"> User </label>
+                <div class="col-md-10">
+                    <select ng-model="data.UserId" id="UserId"  class="form-control"
+                            ng-options="option.Id as option.Name for option in UserId_options">
+                        <option value="">-- choose User --</option>
+                    </select>
+                    <div id="validation_for_UserId"></div>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="button" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div>
+        <a href="#/Trip">Back to List</a>
+    </div>

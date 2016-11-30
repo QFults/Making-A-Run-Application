@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Trip</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            Are you sure that you want to delete {{Trip}}?
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2">
+                Name
+                </label>
+                <div class="col-md-10">
+                    {{data.Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Time" class = "control-label col-md-2">
+                Time
+                </label>
+                <div class="col-md-10">
+                    {{data.Time}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Location" class = "control-label col-md-2">
+                Location
+                </label>
+                <div class="col-md-10">
+                    {{data.Location}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="User" class = "control-label col-md-2">
+                 User
+                </label>
+                <div class="col-md-10">
+                    {{data.User_Username}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Orders" class = "control-label col-md-2">
+                 Orders
+                </label>
+                <div class="col-md-10">
+                    {{data.Orders_Count}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Location1" class = "control-label col-md-2">
+                 Location1
+                </label>
+                <div class="col-md-10">
+                    {{data.Location1_Count}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    
+    <div>
+        <a href="#/Trip">Back to List</a>
+    </div>

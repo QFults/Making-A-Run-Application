@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="container loginContainer">
+    <div class="row">
+        <div class="col-md-12 loginInputClass">
+        <h2>Login</h2>
+            <span class="pleaseWaitClass" ng-show="pleasewait">Incorrect Username or Password was tried too many times.</span>
+            <span class="pleaseWaitClass" ng-show="pleasewait">Please wait 1 minute and then try again.</span>
+            <label for="Username" class="control-label eachLabel"> Username </label>
+            <input type="text" ng-model="data.Username" id="Username" class="form-control eachInput" ng-disabled="logintrys > 4"/>
+            <div id="validation_for_Username"></div>
+            <label for="Password" class="control-label eachLabel"> Password </label>
+            <input type="password" ng-model="data.Password" id="Password" class="form-control eachInput" ng-disabled="logintrys > 4"/>
+            <div id="validation_for_Password"></div>
+            <input type="button" value="Login" class="btn btn-default loginButton" ng-click="login(data.Username, data.Password)" ng-disabled="logintrys > 4"/>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-12">
+            <span>Don't Have An Account?</span>
+            <a ui-sref="userCreate" class="loginLink">Click To Sign Up</a>
+            <br />
+            <span>Forgot Password?</span>
+            <a ui-sref="userVerify" class="loginLink">Click For Help</a>
+        </div>
+    </div>
+</div>

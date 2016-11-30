@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Trip Details Test</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2">
+                Name
+                </label>
+                <div class="col-md-10">
+                    {{data.Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Time" class = "control-label col-md-2">
+                Time
+                </label>
+                <div class="col-md-10">
+                    {{data.Time}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Location" class = "control-label col-md-2">
+                Location
+                </label>
+                <div class="col-md-10">
+                    {{data.Location}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="User" class = "control-label col-md-2">
+                 User
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#User/{{User }}" >
+                    {{data.User_Username}}
+                    </a>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Orders" class = "control-label col-md-2">
+                 Orders
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#Order?Trip={{data.Id }}" >
+                    {{data.Orders_Count}}
+                    </a>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Location1" class = "control-label col-md-2">
+                 Location1
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#Location?Trip={{data.Id }}" >
+                    {{data.Location1_Count}}
+                    </a>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+    <div>
+        <a href="#/Trip">Back to List</a>
+    </div>

@@ -1,0 +1,66 @@
+﻿@{
+    Layout = null;
+}
+    <h2>{{Data.Name}} Orders</h2>
+                        <span>Order Placed By: {{fullOrder.UserId}}</span>
+                    <div ng-repeat="order in fullOrders" ng-hide="isHidden(data)">
+                        <span>Food: {{order.Food}}</span>
+                        <span>Drink: {{order.Drink}}</span>
+                        <span>Payment Method: {{order.PaymentMethod}}</span>
+                    </div>
+    <div>
+        <a ui-sref="Home.tripList" class="loginLink">Back to List</a>
+    </div>
+        @*<div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2">
+                Name
+                </label>
+                <div class="col-md-10">
+                    {{data.Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Time" class = "control-label col-md-2">
+                Time
+                </label>
+                <div class="col-md-10">
+                    {{data.Time}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="User" class = "control-label col-md-2">
+                 User
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#User/{{User }}" >
+                    {{data.User_Username}}
+                    </a>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Orders" class = "control-label col-md-2">
+                 Orders
+                </label>
+                <div class="col-md-10">
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Location" class = "control-label col-md-2">
+                 Location
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#Location/{{Location }}" >
+                    {{data.Location_Image}}
+                    </a>
+                </div>
+            </div>
+    
+           
+        </div>*@
+    

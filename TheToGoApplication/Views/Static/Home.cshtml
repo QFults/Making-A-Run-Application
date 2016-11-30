@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<div id="mySidenav" class="sidenav" >
+        <a href="javascript:void(0)" ng-click="closeNav()" class="myclosebtn">x</a>
+        <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify:playlist:1t1jtvKSLX3jHMtZqiwaMn" align="bottom" width="250" height="80" frameborder="0" allowtransparency="true"></iframe>
+        <a ui-sref="Home.myOrders" ng-show="isHidden()">view my orders.</a>
+        <a ui-sref="Home.userList" ng-show="isHiddenAdmin()">view users.</a>
+        <a ui-sref="Home.locationList" ng-show="isHiddenAdmin()">view locations.</a>
+        <a ui-sref="Home.tripList" ng-show="isHidden()">view trips.</a>
+        <a ui-sref="Home.tripCreate" ng-show="isHidden()">create a trip.</a>
+        <a ui-sref="Home.orderCreate" ng-show="isHidden()">create an order.</a>
+</div>
+
+<div id="main">
+    
+        <div class="viewClass">
+    <ui-view>
+            <div class="container">
+            <h2>Welcome {{theName}}!</h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3>About The App</h3>
+                        <span>
+                            <i>making a run.</i> is an application created for businesses that want to stay more connected as a whole. It offers employees the ability to post publicly about any
+                            place they are going to, such as the office supply store or a coffee shop. With this capability, users who want to allow others to request an order can do so without having to send
+                            mass emails, texts, or go person to person. <i>making a run.</i> stores each trip until the time <b>you</b> are willing to take peoples orders. Each time an order is placed on your trip,
+                            an email will be sent to you containing the preson's order and how they plan to repay you. <i>making a run.</i> is the industry standard for business connection and good will.
+                        </span>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-success" ng-click="openNav()">view options.</button>
+                    </div>
+                </div>
+            </div>
+    </ui-view>
+        </div>
+</div>

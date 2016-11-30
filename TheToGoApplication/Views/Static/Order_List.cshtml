@@ -1,0 +1,35 @@
+﻿    @{
+        Layout = null;
+    }
+<div class="container">
+    <div class="row">
+        <h2>my orders.</h2>
+        <div class="col-md-10">
+            <div ng-repeat="item in orderData">
+                    <div></div>
+                    <span>Trip: {{item.Trip_Name}}</span>
+                    <div></div>
+                    <span>Food Ordered: {{item.Food}}</span>
+                    <div></div>
+                    <span>Drink Ordered: {{item.Drink}}</span>
+                    <div></div>
+                    <span>Payment Method: {{item.PaymentMethod}}</span>
+                    <div> </div>
+                    <div> </div>
+                    <div> </div>
+                    <span class="selectItem" ng-click="selectItem(item)"> click to select order.</span>
+                    <hr />
+</div>      
+            </div>
+        <div class="col-md-2">
+            <button class="btn btn-success orderbtn" ng-click="openNav()">view options.</button>
+            <button class="btn btn-default orderbtn" ng-click="ViewOrder()" ng-disabled="isSelected()">view.</button>
+            <button class="btn btn-default orderbtn" ng-click="EditOrder()" ng-disabled="isSelected()">edit.</button>
+            <button class="btn btn-default orderbtn" ng-click="DeleteOrder()" ng-disabled="isSelected()">delete.</button>
+        </div>
+    </div>
+        <div class="row">
+<button ng-click="AddOrder()">add order.</button>
+            </div>
+</div>
+

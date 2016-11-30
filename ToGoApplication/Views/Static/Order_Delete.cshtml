@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Order</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            Are you sure that you want to delete {{Order}}?
+            <div class="form-group">
+                <label for="Food" class = "control-label col-md-2">
+                Food
+                </label>
+                <div class="col-md-10">
+                    {{data.Food}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Drink" class = "control-label col-md-2">
+                Drink
+                </label>
+                <div class="col-md-10">
+                    {{data.Drink}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="PaymentMethod" class = "control-label col-md-2">
+                PaymentMethod
+                </label>
+                <div class="col-md-10">
+                    {{data.PaymentMethod}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="User" class = "control-label col-md-2">
+                 User
+                </label>
+                <div class="col-md-10">
+                    {{data.User_Username}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Trip" class = "control-label col-md-2">
+                 Trip
+                </label>
+                <div class="col-md-10">
+                    {{data.Trip_Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    
+    <div>
+        <a href="#/Order">Back to List</a>
+    </div>

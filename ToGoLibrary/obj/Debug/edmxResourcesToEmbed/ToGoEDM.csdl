@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ToGoEDM" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ToGoEDMContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="ToGoEDM.User" />
+    <EntitySet Name="Orders" EntityType="ToGoEDM.Order" />
+    <EntitySet Name="Trips" EntityType="ToGoEDM.Trip" />
+    <AssociationSet Name="UserOrder" Association="ToGoEDM.UserOrder">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="UserTrip" Association="ToGoEDM.UserTrip">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Trip" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="TripOrder" Association="ToGoEDM.TripOrder">
+      <End Role="Trip" EntitySet="Trips" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <EntitySet Name="Locations" EntityType="ToGoEDM.Location" />
+    <AssociationSet Name="TripLocation" Association="ToGoEDM.TripLocation">
+      <End Role="Trip" EntitySet="Trips" />
+      <End Role="Location" EntitySet="Locations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Company" Type="String" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="ToGoEDM.UserOrder" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Trips" Relationship="ToGoEDM.UserTrip" FromRole="User" ToRole="Trip" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Food" Type="String" Nullable="false" />
+    <Property Name="Drink" Type="String" Nullable="false" />
+    <Property Name="PaymentMethod" Type="String" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="ToGoEDM.UserOrder" FromRole="Order" ToRole="User" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Trip" Relationship="ToGoEDM.TripOrder" FromRole="Order" ToRole="Trip" />
+    <Property Name="TripId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trip">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Time" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="ToGoEDM.UserTrip" FromRole="Trip" ToRole="User" />
+    <Property Name="EndTime" Type="DateTime" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="ToGoEDM.TripOrder" FromRole="Trip" ToRole="Order" />
+    <NavigationProperty Name="Location" Relationship="ToGoEDM.TripLocation" FromRole="Trip" ToRole="Location" />
+    <Property Name="LocationId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="UserOrder">
+    <End Type="ToGoEDM.User" Role="User" Multiplicity="1" />
+    <End Type="ToGoEDM.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserTrip">
+    <End Type="ToGoEDM.User" Role="User" Multiplicity="1" />
+    <End Type="ToGoEDM.Trip" Role="Trip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TripOrder">
+    <End Type="ToGoEDM.Trip" Role="Trip" Multiplicity="1" />
+    <End Type="ToGoEDM.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trip">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="TripId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Image" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Trips" Relationship="ToGoEDM.TripLocation" FromRole="Location" ToRole="Trip" />
+  </EntityType>
+  <Association Name="TripLocation">
+    <End Type="ToGoEDM.Trip" Role="Trip" Multiplicity="*" />
+    <End Type="ToGoEDM.Location" Role="Location" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Trip">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

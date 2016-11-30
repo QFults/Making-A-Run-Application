@@ -1,0 +1,87 @@
+﻿@{
+    Layout = null;
+}
+    <h2>User Details Test</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            <div class="form-group">
+                <label for="Username" class = "control-label col-md-2">
+                Username
+                </label>
+                <div class="col-md-10">
+                    {{data.Username}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Password" class = "control-label col-md-2">
+                Password
+                </label>
+                <div class="col-md-10">
+                    {{data.Password}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2">
+                Name
+                </label>
+                <div class="col-md-10">
+                    {{data.Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Company" class = "control-label col-md-2">
+                Company
+                </label>
+                <div class="col-md-10">
+                    {{data.Company}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Email" class = "control-label col-md-2">
+                Email
+                </label>
+                <div class="col-md-10">
+                    {{data.Email}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="PhoneNumber" class = "control-label col-md-2">
+                PhoneNumber
+                </label>
+                <div class="col-md-10">
+                    {{data.PhoneNumber}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Orders" class = "control-label col-md-2">
+                 Orders
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#Order?User={{data.Id }}" >
+                    {{data.Orders_Count}}
+                    </a>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Trips" class = "control-label col-md-2">
+                 Trips
+                </label>
+                <div class="col-md-10">
+                    <a ng-href="#Trip?User={{data.Id }}" >
+                    {{data.Trips_Count}}
+                    </a>
+                </div>
+            </div>
+    
+           
+        </div>
+    
+    <div>
+    </div>

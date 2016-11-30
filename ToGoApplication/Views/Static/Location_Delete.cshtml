@@ -1,0 +1,44 @@
+﻿@{
+    Layout = null;
+}
+    <h2>Location</h2>
+        <div class="form-horizontal">
+            <ul id="validationSummary"></ul>
+            Are you sure that you want to delete {{Location}}?
+            <div class="form-group">
+                <label for="Image" class = "control-label col-md-2">
+                Image
+                </label>
+                <div class="col-md-10">
+                    {{data.Image}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Name" class = "control-label col-md-2">
+                Name
+                </label>
+                <div class="col-md-10">
+                    {{data.Name}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Trip" class = "control-label col-md-2">
+                 Trip
+                </label>
+                <div class="col-md-10">
+                    {{data.Trip_Count}}
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save" class="btn btn-default" ng-click="save()" />
+                </div>
+            </div>
+        </div>
+    
+    <div>
+        <a href="#/Location">Back to List</a>
+    </div>

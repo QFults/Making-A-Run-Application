@@ -1,0 +1,10 @@
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\ToGoLibrary.dll
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\ToGoLibrary.pdb
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\obj\Debug\ToGoLibrary.csprojResolveAssemblyReference.cache
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\obj\Debug\ToGoLibrary.dll
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\obj\Debug\ToGoLibrary.pdb
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\ToGoLibrary.dll.config
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\EntityFramework.dll
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\EntityFramework.xml
+C:\Users\kash4\OneDrive\Documents\Phase 2\ToGoLibrary\ToGoLibrary\bin\Debug\EntityFramework.SqlServer.xml
